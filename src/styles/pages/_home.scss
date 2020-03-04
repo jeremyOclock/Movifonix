@@ -1,0 +1,26 @@
+.home {
+  &__subscribe {
+    margin: 600px;
+    color: #e5e5e5;
+    text-decoration: none;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    background: lighten(#141414, 3%);
+    padding: 10px 30px;
+    font-size: 1.5em;
+    border-radius: 8px;
+    transition: 550ms;
+
+    &:hover {
+      background: darken(#e5e5e5, 8%);
+      color: #141414;
+      transform: scale(1.05);
+    }
+  }
+
+  & > img {
+    margin: 50px auto 100px;
+    display: block;
+    height: 15vmin;
+  }
+}

@@ -1,0 +1,13 @@
+@import './abstracts/variables';
+@import './abstracts/fonts';
+
+@import './pages/home';
+
+@import './components/movieCard';
+@import './components/movieList';
+@import './components/movieInfos';
+@import './components/signUp';
+
+body {
+  background-color: #141414;
+}

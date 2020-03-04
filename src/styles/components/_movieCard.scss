@@ -1,0 +1,61 @@
+.movie-card {
+  $radius: 40px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  width: 300px;
+  height: 300px;
+  border-radius: $radius;
+  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: 0.4s;
+
+  &:hover {
+    transform: scale(0.9);
+  }
+
+  &__container {
+    position: relative;
+    width: inherit;
+    height: inherit;
+    z-index: -1;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(100% + 1px);
+      height: calc(100% + 1px);
+      display: inline-block;
+      background: linear-gradient(to top, black, rgba(#000, 0));
+      border-radius: $radius;
+    }
+
+    &__img {
+      width: inherit;
+      height: inherit;
+      object-fit: cover;
+      border-radius: $radius;
+    }
+  }
+
+  &__title {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    transform: translateY(calc(-100% - 20px));
+    margin: 0 auto;
+    text-align: center;
+    color: darken($primary-color, 3%);
+    width: 90%;
+    display: block;
+    display: -webkit-box;
+    line-height: 1.35;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
